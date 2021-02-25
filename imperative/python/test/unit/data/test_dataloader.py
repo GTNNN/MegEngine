@@ -248,7 +248,7 @@ def test_dataloader_parallel_multi_instances():
 
     _multi_instances_parallel_dataloader_worker()
 
-
+@pytest.mark.skip(reason="FIXME it may cause ci hang")
 def test_dataloader_parallel_multi_instances_multiprocessing():
     # set max shared memory to 100M
     os.environ["MGE_PLASMA_MEMORY"] = "100000000"
